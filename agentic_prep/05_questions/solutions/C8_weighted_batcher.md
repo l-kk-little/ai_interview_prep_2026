@@ -1,6 +1,6 @@
 # [C8] Anthropic：Weighted DataBatcher with Deterministic Checkpointing · 参考实现
 
-⏱ 读完 12 min ｜ 建议先按 55 分钟时间盒盲写一遍再对照（盲看解答记不住）。题面原文见 [../C_live_ai_coding.md](../C_live_ai_coding.md#c8)，完整 rubric 见 [../../../agentic/data/questions.json](../../../agentic/data/questions.json) → `q-anthropic-weighted-batcher`。
+⏱ 读完 12 min ｜ 建议先按 55 分钟时间盒盲写一遍再对照（盲看解答记不住）。题面原文见 [../C_live_ai_coding.md](../C_live_ai_coding.md#c8)，完整 rubric 见 [外部原件未收录：../../../agentic/data/questions.json](../../DEPENDENCIES.md) → `q-anthropic-weighted-batcher`。
 
 ## 题目还原 + 验收标准
 
@@ -158,3 +158,4 @@ if __name__ == "__main__":
 ## 如果这轮允许 AI：怎么驾驶
 
 题库注明 Anthropic 这轮**全程可查文档、禁 AI**——按禁 AI 准备，把 `getstate/setstate` 的 tuple↔list 转换写成肌肉记忆。若真的允许，按 [../../02_playbook.md](../../02_playbook.md) 第八节：验收标准 1–6 和三层状态模型（有状态 rng / 纯函数洗牌 / 游标）是你的设计判断，先自己写在注释里，再让 AI 一次一个窄任务（"实现 resume，含 fingerprint 校验和 rng setstate，附 split-run 等价测试"）。review 专查三处：weights 存的是不是原始值、`sorted(registry)` 有没有丢、JSON round-trip 是不是真的测了——这三处正是 AI 最常偷懒、也正是确定性 30% 分数所在。
+

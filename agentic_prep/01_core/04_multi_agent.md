@@ -278,4 +278,5 @@ def fan_in(results, state):
 6. [Claude Code: Create custom subagents](https://code.claude.com/docs/en/sub-agents) — 生产系统里"独立 context、只回最终文本"的实际形态与配置格式 · 10 min
 7. [MAST repo (GitHub)](https://github.com/multi-agent-systems-failure-taxonomy/MAST) — 1600+ 标注 trace 数据集 + LLM-as-judge pipeline 代码，想看真实失败 trace 长什么样就翻这里 · 15 min
 8. [A2A Protocol (a2aproject/A2A)](https://github.com/a2aproject/A2A) — Agent Card 与 task 生命周期规范；扫 `docs/specification.md` 即可 · 10 min
-9. 动手：[v1 lab04 · 原生 Orchestrator/Workers/Memory](../../agentic/labs/04_multi_agent_memory/README.md) — 60 min 内不靠框架实现有界并发、typed result、冲突不写入、CAS 共享状态；上面工程要点块的可运行版本 · 60 min
+9. 动手：[外部原件未收录：v1 lab04 · 原生 Orchestrator/Workers/Memory](../DEPENDENCIES.md) — 60 min 内不靠框架实现有界并发、typed result、冲突不写入、CAS 共享状态；原可运行版本未发布；按练习指南做白板替代 · 60 min
+

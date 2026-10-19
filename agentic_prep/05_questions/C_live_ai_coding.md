@@ -24,7 +24,7 @@
 
 **高频追问**：prompt 设计 ｜ 防幻觉（强制引用 tool 结果） ｜ 并行 tool call 怎么做
 
-完整 rubric: [../../agentic/data/questions.json](../../agentic/data/questions.json) → `q-anthropic-stock-agent`
+完整 rubric: [外部原件未收录：../../agentic/data/questions.json](../DEPENDENCIES.md) → `q-anthropic-stock-agent`
 
 </details>
 
@@ -45,7 +45,7 @@
 
 **高频追问**：pickle 为什么不适合不可信文件？ ｜ 如何演进 key encoding 不静默错误命中？
 
-完整 rubric: [../../agentic/data/questions.json](../../agentic/data/questions.json) → `q-anthropic-durable-cache`
+完整 rubric: [外部原件未收录：../../agentic/data/questions.json](../DEPENDENCIES.md) → `q-anthropic-durable-cache`
 
 </details>
 
@@ -141,7 +141,7 @@
 
 **高频追问**：checkpoint 正好在 batch 一半？ ｜ 百万数据源的高效 weighted choice（alias table / 树状累积权重）？ ｜ worker 扩缩容 shard 稳定性？
 
-完整 rubric: [../../agentic/data/questions.json](../../agentic/data/questions.json) → `q-anthropic-weighted-batcher`
+完整 rubric: [外部原件未收录：../../agentic/data/questions.json](../DEPENDENCIES.md) → `q-anthropic-weighted-batcher`
 
 </details>
 
@@ -217,7 +217,7 @@
 - Review 时说清"哪些是 AI 写的、我怎么验证的"——对 AI 输出的批判性验证是他们看的信号
 - 注意：社区面经报告的仍是 take-home+debugging 旧流程，两种可能并存，**向 recruiter 确认场次格式**
 
-完整 rubric: [../../agentic/data/questions.json](../../agentic/data/questions.json) → `q-sierra-plan-build-review`
+完整 rubric: [外部原件未收录：../../agentic/data/questions.json](../DEPENDENCIES.md) → `q-sierra-plan-build-review`
 
 </details>
 
@@ -238,7 +238,7 @@
 
 **高频追问**：AI 建议重写整个模块时你怎么判断？ ｜ 哪些问题你选择不修、为什么？
 
-完整 rubric: [../../agentic/data/questions.json](../../agentic/data/questions.json) → `q-sierra-cross-cutting-pr`
+完整 rubric: [外部原件未收录：../../agentic/data/questions.json](../DEPENDENCIES.md) → `q-sierra-cross-cutting-pr`
 
 </details>
 
@@ -287,7 +287,7 @@
 
 **相邻数据点**：OpenAI Support Engineer 有正式 "vibe coding" 轮——debug 间歇性失败的 Python 脚本（根因 race condition）、写自动化；同帖强调 HM 轮 bar 极高，建议深学 OpenAI API 产品细节。
 
-完整 rubric: [../../agentic/data/questions.json](../../agentic/data/questions.json) → `q-openai-coding-harness`
+完整 rubric: [外部原件未收录：../../agentic/data/questions.json](../DEPENDENCIES.md) → `q-openai-coding-harness`
 
 </details>
 
@@ -330,3 +330,4 @@
 </details>
 
 > 高分句：AI-assisted 轮评的不是代码而是工作流——分解先于 prompt，验证先于接受，全程出声。
+

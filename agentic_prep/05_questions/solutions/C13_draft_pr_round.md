@@ -1,7 +1,7 @@
 # [C13] Sierra 试点：同事 draft PR + coding agents 改进 · 完整解答
 
 ⏱ 读完 10 min ｜ 彩排素材：v1 自拟场景（ticket priority 跨 API/DB/queue/UI）直接可用
-题库原文：[../C_live_ai_coding.md#c13](../C_live_ai_coding.md#c13) ｜ v1 rubric：[../../../agentic/data/questions.json](../../../agentic/data/questions.json) → `q-sierra-cross-cutting-pr`
+题库原文：[../C_live_ai_coding.md#c13](../C_live_ai_coding.md#c13) ｜ v1 rubric：[外部原件未收录：../../../agentic/data/questions.json](../../DEPENDENCIES.md) → `q-sierra-cross-cutting-pr`
 对照轮：[C9 禁 AI debugging](C9_debugging_round.md)（裸 debug）｜ 同 onsite：[C12 Plan→Build→Review](C12_plan_build_review.md)
 
 ## 题目还原：这题真正在考什么
@@ -86,3 +86,4 @@ Agent 输出必须抽查验证——挑 2 个关键结论亲自打开文件确�
 
 - Sierra 官方博客 "The AI-native interview"（题库 [C13] 与 v1 rubric 的来源）：官方原话 "pulling down the code, inspecting the output, and iterating with coding agents"；本轮与禁 AI 的 [C9](C9_debugging_round.md) 构成"裸 debug vs 带 agent debug"双面验证
 - 侦察→计划→窄任务→验证的驾驶模板：[../../02_playbook.md](../../02_playbook.md) 第八节；coding agent harness 的环境/verifier 视角：[../../01_core/03_harness_env_swe.md](../../01_core/03_harness_env_swe.md)
+

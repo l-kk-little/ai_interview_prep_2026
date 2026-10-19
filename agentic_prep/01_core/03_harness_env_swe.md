@@ -221,7 +221,7 @@ from e2b_code_interpreter import Sandbox
 sbx = Sandbox(template="my-env", timeout=300)   # timeout 到期自动回收
 sbx.commands.run("pip install -r requirements.txt")
 res = sbx.run_code("import pandas as pd; ...")   # stdout/stderr/rich 输出结构化返回
-sbx.files.write("/home/user/patch.diff", diff)   # 文件系统 API 双向传输
+sbx.files.write("/home/user/patch.diff", diff)   # 文件系统 API 双向传输 <!-- path-check: example Sandbox guest filesystem example -->
 ```
 
 - **模板系统**：用户写 Dockerfile 定义环境 → E2B 构建成 microVM rootfs + 内存快照；创建 sandbox = 从 snapshot 恢复（整机状态含运行中进程，~150ms），而不是冷启动。
@@ -281,3 +281,4 @@ python -m swebench.harness.run_evaluation \
 7. [Firecracker vs QEMU（E2B 官方博客）](https://e2b.dev/blog/firecracker-vs-qemu) — 为什么 agent 沙箱选 microVM：boot 时间、内存开销、攻击面对比 · 15 min
 8. [openai/codex-universal](https://github.com/openai/codex-universal) — universal 镜像的参考 Dockerfile 与 CODEX_ENV_* 版本 pin 机制，可本地拉起复现 · 5 min
 9. [E2B docs](https://e2b.dev/docs) — 托管沙箱 SDK：模板→snapshot→sandbox 生命周期，看 quickstart 与 sandbox lifecycle 两页 · 10 min
+

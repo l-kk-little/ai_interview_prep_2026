@@ -2,7 +2,7 @@
 
 ⏱ 约 8 分钟读完 ｜ 面试前只看 ⭐⭐⭐ 部分（对应公司那一张卡 + 万能结尾）
 
-来源等级见 [companies.json](../agentic/data/companies.json)；`🧪/role-derived` 练习绝不能在面试里说成真题。题号 → [05_questions/README.md](05_questions/README.md)。
+来源等级见 [外部原件未收录：companies.json](DEPENDENCIES.md)；`🧪/role-derived` 练习绝不能在面试里说成真题。题号 → [05_questions/README.md](05_questions/README.md)。
 
 ## 通用前 15 分钟节奏
 
@@ -188,7 +188,7 @@
 
 - **形式已确认（official 邮件）**：60 min live working session（Google Meet）——**build a CLI chat agent with memory**。开场才给 starter repo + brief（含 basic test harness）；工程师只观察不 pair。提前装好 git/uv/python，**AI 环境明确允许**（Claude Code 等）。
 - **评分点（邮件原文）**：memory system 的思考 ｜ architecture & code taste ｜ scope 与优先级 ｜ 在 test harness 上扩展 + edge cases + 验证 ｜ **结尾 walkthrough 权重很大**。
-- **备战材料**：`../projects/valkai_agent/`（模拟题 + 实现计划 + 练习实现）；memory 设计对齐 [01_core/02](01_core/02_state_and_memory.md) 的写入 gate/supersede。
+- **备战材料**：[外部项目未收录；使用替代路线](DEPENDENCIES.md)（模拟题 + 实现计划 + 练习实现）；memory 设计对齐 [01_core/02](01_core/02_state_and_memory.md) 的写入 gate/supersede。
 - 领域底色（聊产品时用）：
   1. source/version/ACL 是事实层，embedding 只是检索索引。
   2. claim graph 保留支持/反驳/未知 + exact citation；撤稿按 provenance 传播。
@@ -214,3 +214,4 @@
 4. "上线走 offline held-out → shadow → canary；同时看 outcome、policy、cost、latency。"
 
 > 高分句：AI 使用权限不能从题型或公司文化推断——除非明确书面/口头允许，一律按不允许处理。
+

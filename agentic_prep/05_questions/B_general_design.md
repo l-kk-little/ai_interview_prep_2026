@@ -20,7 +20,7 @@
 
 **高频追问**：memory 写错怎么撤销？ ｜ 新工具如何不破坏旧任务？ ｜ 何时需要多 agent、如何证明值得？
 
-完整 rubric: [../../agentic/data/questions.json](../../agentic/data/questions.json) → `q-anthropic-adaptive-agent`
+完整 rubric: [外部原件未收录：../../agentic/data/questions.json](../DEPENDENCIES.md) → `q-anthropic-adaptive-agent`
 
 </details>
 
@@ -57,7 +57,7 @@
 
 **高频追问**：两个 agent 同时改一个文档？ ｜ 如何解释某 agent 为何获得任务？ ｜ 如何评估团队而非单 agent 贡献？
 
-完整 rubric: [../../agentic/data/questions.json](../../agentic/data/questions.json) → `q-humans-shared-workspace`（姊妹题 `q-humans-group-memory`：共识/分歧/遗忘）
+完整 rubric: [外部原件未收录：../../agentic/data/questions.json](../DEPENDENCIES.md) → `q-humans-shared-workspace`（姊妹题 `q-humans-group-memory`：共识/分歧/遗忘）
 
 </details>
 
@@ -74,7 +74,7 @@
 
 **高频追问**：网页内容诱导 agent 上传 secret 怎么防（间接注入）？ ｜ click 成功但 observation timeout？ ｜ 视觉模型看不到 disabled state？
 
-完整 rubric: [../../agentic/data/questions.json](../../agentic/data/questions.json) → `q-hark-computer-use-sandbox`（姊妹题 `q-hark-posttraining-harness`：CUA post-training/eval，对齐 Hark JD 的 GRPO/SWE-bench 关键词）
+完整 rubric: [外部原件未收录：../../agentic/data/questions.json](../DEPENDENCIES.md) → `q-hark-computer-use-sandbox`（姊妹题 `q-hark-posttraining-harness`：CUA post-training/eval，对齐 Hark JD 的 GRPO/SWE-bench 关键词）
 
 </details>
 
@@ -87,11 +87,11 @@
 
 **题面**：为企业 legal agent 设计训练/发布 eval harness。任务来自真实 workflow，agent 可查文档和起草内容。需防 data leakage、grader gaming、环境污染，并比较新 checkpoint 与 production model。
 
-**参考打法**：production taxonomy 分层抽样，按客户/时间隔离 held-out → immutable EvalTask 固定 environment snapshot + policy → outcome/policy/process 三类 grader 分开 → 隐藏 canary facts + adversarial tasks + grader ensemble 抓 gaming → paired trials、多 seed、slice CI；shadow→canary 逐步发布。配套 lab：`../../agentic/labs/05_eval_harness`。
+**参考打法**：production taxonomy 分层抽样，按客户/时间隔离 held-out → immutable EvalTask 固定 environment snapshot + policy → outcome/policy/process 三类 grader 分开 → 隐藏 canary facts + adversarial tasks + grader ensemble 抓 gaming → paired trials、多 seed、slice CI；shadow→canary 逐步发布。配套 lab：[原 lab 未收录；改做 B5 白板练习](../DEPENDENCIES.md)。
 
 **高频追问**：线上指标变好、离线变差？ ｜ LLM judge 与被测模型同源的风险？ ｜ 失败 trace 变训练信号又不污染 test？
 
-完整 rubric: [../../agentic/data/questions.json](../../agentic/data/questions.json) → `q-applied-agent-eval`（姊妹题 `q-applied-improvement-loop`：trace→eval→improvement 闭环）
+完整 rubric: [外部原件未收录：../../agentic/data/questions.json](../DEPENDENCIES.md) → `q-applied-agent-eval`（姊妹题 `q-applied-improvement-loop`：trace→eval→improvement 闭环）
 
 </details>
 
@@ -148,7 +148,7 @@
 
 **高频追问**：工具 schema 升级如何不中断进行中 run？ ｜ 工具返回的 prompt injection？ ｜ 模型反复选错工具——是描述、retrieval 还是 model 的问题？
 
-完整 rubric: [../../agentic/data/questions.json](../../agentic/data/questions.json) → `q-tiktok-agent-tool-system`
+完整 rubric: [外部原件未收录：../../agentic/data/questions.json](../DEPENDENCIES.md) → `q-tiktok-agent-tool-system`
 
 </details>
 
@@ -166,3 +166,4 @@
 </details>
 
 > 高分句：多数场景单 agent + 好工具就够；上 multi-agent 之前我要先证明它赢过单 agent 基线，并接受约 15 倍的 token 成本。
+

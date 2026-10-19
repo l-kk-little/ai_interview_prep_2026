@@ -137,14 +137,18 @@
         return;
       }
       var clean = href.split("#")[0];
-      if (!/\.md$/i.test(clean)) return;
       var target = resolvePath(fromPath, clean);
       var idx = DOCS.findIndex(function (d) { return d.path === target; });
-      a.addEventListener("click", function (e) {
-        e.preventDefault();
-        if (idx >= 0) show(idx);
-      });
-      if (idx < 0) a.style.opacity = ".5"; // link target not in bundle
+      if (/\.md$/i.test(clean) && idx >= 0) {
+        a.addEventListener("click", function (e) {
+          e.preventDefault();
+          show(idx);
+        });
+      } else {
+        // The rendered document lives under viewer/, but its links are relative
+        // to the source Markdown file. Keep cross-module files navigable offline.
+        a.href = new URL(href, new URL("../" + fromPath, window.location.href)).href;
+      }
     });
   }
 
@@ -169,3 +173,4 @@
   buildNav();
   if (DOCS.length) show(0);
 })();
+

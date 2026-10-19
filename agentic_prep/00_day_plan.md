@@ -2,6 +2,8 @@
 
 ⏱ 本文件 5 分钟读完 ｜ **每天只看当天那一节**，跟着走 = 自动覆盖本课程全部文件，不需要单独刷任何 section
 
+独立克隆提示：这是历史日历，可按 Day 1–9 顺序使用。以下 lab 编号保留为学习主题，具体执行以 [07 · 仓库内替代路线](07_labs_guide.md) 为准。原 starter/solution/RUBRIC 未收录，文中的“读 solution”“starter 前半”等操作仅适用于自行取得原件者；未取得时改做对应现有题解/白板练习，不计为原 lab 完成。Valkai/Mirendil 的专属任务未发布，改用 07 的通用路线，不需要为默认练习准备 API key。
+
 规则：
 - 每天格式固定：**面试前 30 min** → **主任务 ⭐⭐⭐** → **次任务 ⭐** → **砍时规则**
 - 时间不够先砍 ⭐，绝不砍面试前 30 min
@@ -47,11 +49,11 @@
 |---|---|
 | 每场面试前 30 min | 对应[公司卡](06_company_briefs.md) + [08 · 一页纸](08_cheatsheet.md) |
 | 场间 ⭐⭐⭐ | 重读 [01_core · harness/SWE](01_core/03_harness_env_swe.md)（Extend 的文档管线 = versioned artifact DAG）+ [03 · rag](03_gaps/rag.md) 高分句（Extend 必问检索/抽取评测） |
-| **Valkai 前 30 min ⭐⭐⭐** | `../projects/valkai_agent/02_plan.md` 的 60 分钟时间轴 + walkthrough 讲稿默背；确认 git/uv/python/Claude Code + API key 就绪 |
-| 晚 | 切换到 `../projects/takehome_mirendil/`（出本课程范围）；顺手 30 min 通读 [04 · benchmarks](04_benchmarks.md) 主表 |
+| **Valkai 前 30 min ⭐⭐⭐** | [外部项目未收录；使用替代路线](DEPENDENCIES.md) 的 60 分钟时间轴 + walkthrough 讲稿默背；确认 git/uv/python/Claude Code + API key 就绪 |
+| 晚 | 切换到 [外部项目未收录；使用替代路线](DEPENDENCIES.md)（出本课程范围）；顺手 30 min 通读 [04 · benchmarks](04_benchmarks.md) 主表 |
 | 砍时 | benchmarks 推到 7/18 |
 
-> **7/16 晚加练**：用 `../projects/valkai_agent/` 的模拟题做一次 60 分钟全真干跑（Claude Code 驱动，计时），练完对照实现计划复盘。
+> **7/16 晚加练**：用 [外部项目未收录；使用替代路线](DEPENDENCIES.md) 的模拟题做一次 60 分钟全真干跑（Claude Code 驱动，计时），练完对照实现计划复盘。
 
 ## 7/18 · Mirendil take-home 日
 
@@ -62,7 +64,7 @@ agentic2 只占 30 min：[04 · benchmarks](04_benchmarks.md)（若 7/17 没读�
 | 时段 | 做什么 |
 |---|---|
 | 主任务 ⭐⭐⭐（~2h） | 按 [07](07_labs_guide.md) **闭卷重写** lab 01 主循环（stock agent，55 min）；[05 · C 类](05_questions/C_live_ai_coding.md) Anthropic 条目（C1→C2→C4→C5→C6→C7）逐条口述打法；重读 [01_core · loop+tools](01_core/01_loop_and_tools.md)（tool-use 7 步必须能默写） |
-| 次 ⭐ | [03 · agentic_rl](03_gaps/agentic_rl.md)（Anthropic 有 GRPO debug 轮记录）+ [03 · self_improvement](03_gaps/self_improvement.md)（Reflexion/技能库/trace→eval→RL 飞轮，Applied Compute 与 Anthropic 对口）+ 翻一眼 `../new/drills/04_grpo_ppo.py` |
+| 次 ⭐ | [03 · agentic_rl](03_gaps/agentic_rl.md)（Anthropic 有 GRPO debug 轮记录）+ [03 · self_improvement](03_gaps/self_improvement.md)（Reflexion/技能库/trace→eval→RL 飞轮，Applied Compute 与 Anthropic 对口）+ 翻一眼 [GRPO 练习](../online_resource/drills/04_grpo_ppo.py) |
 | 砍时 | agentic_rl 只读 30 秒版本 + reward hacking 三例 |
 
 ## 7/20 · Anthropic 冲刺 ②（durable 家族）
@@ -111,3 +113,4 @@ agentic2 只占 30 min：[04 · benchmarks](04_benchmarks.md)（若 7/17 没读�
 | [06_company_briefs.md](06_company_briefs.md) | 每个面试日的前 30 min |
 | [07_labs_guide.md](07_labs_guide.md) | lab02→7/14 晚；lab04→7/16 晚；lab01→7/19；lab03/05→7/20 |
 | [08_cheatsheet.md](08_cheatsheet.md) | 每个面试日前 30 min；7/21 闭卷默写 |
+

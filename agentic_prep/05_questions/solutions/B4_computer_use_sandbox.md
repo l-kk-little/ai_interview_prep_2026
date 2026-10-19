@@ -1,6 +1,6 @@
 # [B4] Hark：Computer-use Agent Sandbox 与 Tool Harness · 完整解答
 
-⏱ 读完 12 min ｜ 建议先自己限时 60min 答一遍再看（盲看解答记不住）。题面见 [../B_general_design.md](../B_general_design.md#b4)，完整 rubric 见 [../../../agentic/data/questions.json](../../../agentic/data/questions.json) → `q-hark-computer-use-sandbox`，Hark 卡见 [../../06_company_briefs.md](../../06_company_briefs.md)。
+⏱ 读完 12 min ｜ 建议先自己限时 60min 答一遍再看（盲看解答记不住）。题面见 [../B_general_design.md](../B_general_design.md#b4)，完整 rubric 见 [外部原件未收录：../../../agentic/data/questions.json](../../DEPENDENCIES.md) → `q-hark-computer-use-sandbox`，Hark 卡见 [../../06_company_briefs.md](../../06_company_briefs.md)。
 
 ## 题目还原
 
@@ -149,3 +149,4 @@ Credential Broker ──占位符解析──────────►│  dom
 - [Stripe idempotency](https://stripe.com/blog/idempotency)：operation_key = hash(run_id, step, kind, canonical_args) 的语义出处。
 
 > 收尾高分句（背）：这个系统的安全属性没有一条写在 prompt 里——模型只产 proposal，staleness/domain/risk/budget 全部由 validator 和 sandbox 在执行层强制；click 发出而观察超时时，唯一正确动作是重新观察环境判定，而不是相信模型或盲目重试。
+

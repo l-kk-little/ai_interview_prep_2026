@@ -79,7 +79,7 @@
 
 **高频追问**：webhook 重复或乱序？ ｜ 新 schema 重跑旧文档？ ｜ 恶意 PDF 指令隔离？
 
-完整 rubric: [../../agentic/data/questions.json](../../agentic/data/questions.json) → `q-extend-document-agent`（相邻题 `q-extend-permission-agent`：权限/注入版）
+完整 rubric: [外部原件未收录：../../agentic/data/questions.json](../DEPENDENCIES.md) → `q-extend-document-agent`（相邻题 `q-extend-permission-agent`：权限/注入版）
 
 </details>
 
@@ -312,3 +312,4 @@
 </details>
 
 > 高分句：企业 RAG 的权限过滤必须发生在检索层——靠 prompt 叮嘱模型"别看无权文档"在架构上不成立。
+

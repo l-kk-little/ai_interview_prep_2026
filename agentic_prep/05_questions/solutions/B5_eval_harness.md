@@ -1,6 +1,6 @@
 # [B5] Applied Compute：Enterprise Agent Eval Harness 与 Reward Hacking · 完整解答
 
-⏱ 读完 12 min ｜ 建议先自己限时 60min 答一遍再看（盲看解答记不住）。题面原文见 [../B_general_design.md](../B_general_design.md#b5)，完整 rubric 见 [../../../agentic/data/questions.json](../../../agentic/data/questions.json) → `q-applied-agent-eval`；动手版配套 lab：[../../../agentic/labs/05_eval_harness/README.md](../../../agentic/labs/05_eval_harness/README.md)。
+⏱ 读完 12 min ｜ 建议先自己限时 60min 答一遍再看（盲看解答记不住）。题面原文见 [../B_general_design.md](../B_general_design.md#b5)，完整 rubric 见 [外部原件未收录：../../../agentic/data/questions.json](../../DEPENDENCIES.md) → `q-applied-agent-eval`；动手版配套 lab：[外部原件未收录：../../../agentic/labs/05_eval_harness/README.md](../../DEPENDENCIES.md)。
 
 ## 题目还原
 
@@ -119,3 +119,4 @@ Production traces ──► Curation（去标识 + taxonomy 分层抽样 + linea
 - [Applied Compute](https://www.appliedcompute.com/)：题目公司本尊——custom harness/graders/traces/reward hacking detection 是其公开卖点，答题词汇直接对齐。
 
 > 收尾高分句（可背）：eval harness 是 agent 系统的 CI，而 policy 是一个会主动攻击 CI 的对手——所以 grader 要藏在环境外、held-out 要物理隔离、判分要用环境终态而不是模型自述；**自动分和人工抽查一旦散开，涨的那条线就不是能力，是 hack**。
+

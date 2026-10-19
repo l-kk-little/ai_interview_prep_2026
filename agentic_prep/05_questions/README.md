@@ -2,7 +2,7 @@
 
 ⏱ 约 5 分钟读完 ｜ 面试前只看目标公司的 ⭐⭐⭐ 行，点链接跳到对应题
 
-汇编来源：9 个挖掘 agent 的产出（1p3a 缓存题库、hack2hire、官方博客、Exponent/PracHub/面经站）+ v1 题库（`../../agentic/data/questions.json`）吸收。共 **A/B/C 44 题 + D 类 20 条**。Applied Compute / Hark / Humans& / Extend 无公开面经（挖掘确证为空），用 🧪 推导题 + 对口 generic 题覆盖。
+汇编来源：9 个挖掘 agent 的产出（1p3a 缓存题库、hack2hire、官方博客、Exponent/PracHub/面经站）+ v1 题库（[v1 rubric 未收录说明](../DEPENDENCIES.md)）吸收。共 **A/B/C 44 题 + D 类 20 条**。Applied Compute / Hark / Humans& / Extend 无公开面经（挖掘确证为空），用 🧪 推导题 + 对口 generic 题覆盖。
 
 ## 分类法
 
@@ -94,3 +94,4 @@
 - **7/22 Anthropic 前**：C1→C2→C4→C5→C6→C7 + A5→A6→A7→A8 + B1
 - **Applied Compute / Hark / Humans& / Extend**：对应 🧪 题（B3/B4/B5/A4）+ 对口题（B2/B6/A3），配合 [../06_company_briefs.md](../06_company_briefs.md)
 - 每题按 [../02_playbook.md](../02_playbook.md) 的 60 分钟节奏干练：澄清 5–7 min → 设计 10 min → 实现/展开 30 min → 测试复盘 10 min
+

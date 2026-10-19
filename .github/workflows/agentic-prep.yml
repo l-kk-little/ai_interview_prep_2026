@@ -1,0 +1,32 @@
+name: Agentic prep standalone checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  standalone:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: 1acre3points_crawl
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Viewer navigation regressions
+        run: node agentic_prep/tests/test_viewer_links.js
+      - name: Audit Markdown and exercise paths
+        run: python3 agentic_prep/scripts/check_links.py
+      - name: Synthetic path regressions
+        run: python3 -m unittest discover -s agentic_prep/tests -v
+      - name: Existing offline exercises
+        run: |
+          python3 -m unittest discover -s 1acre3points_crawl/tests -p test_claude_stock_agent.py -v
+          python3 -m unittest discover -s 1acre3points_crawl/tests -p test_durable_function_call_cache.py -v
+          python3 -m unittest discover -s 1acre3points_crawl/tests -p test_weighted_data_batcher.py -v
+      - name: Verify offline Viewer data is current
+        run: |
+          python3 agentic_prep/viewer/build_data.py
+          git diff --exit-code -- agentic_prep/viewer/data.js
