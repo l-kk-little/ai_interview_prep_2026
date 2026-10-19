@@ -291,4 +291,5 @@ def wrap_tool_result(result: str) -> str:
 8. [Anthropic: Batch processing](https://platform.claude.com/docs/en/build-with-claude/batch-processing) — -50%、100k/256MB 限额、poll 模式、与 caching 叠加 · 10 min
 9. [OpenAI: Batch API](https://developers.openai.com/api/docs/guides/batch) — JSONL 提交格式、24h window、独立 rate limit 池 · 10 min
 
-相关：[scaling.md](scaling.md)（队列/背压是并发上界的另一半）｜ [streaming.md](streaming.md)（感知延迟）｜ [01_core](../01_core/README.md)（loop/context 基础）｜ v1 系统设计剧本：[SYSTEM_DESIGN_PLAYBOOK](../../agentic/content/SYSTEM_DESIGN_PLAYBOOK.md)
+相关：[scaling.md](scaling.md)（队列/背压是并发上界的另一半）｜ [streaming.md](streaming.md)（感知延迟）｜ [01_core](../01_core/README.md)（loop/context 基础）｜ v1 系统设计剧本：[答题框架（本仓库版）](../02_playbook.md)
+

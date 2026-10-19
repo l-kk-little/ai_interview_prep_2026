@@ -2,7 +2,7 @@
 
 ⏱ 约 2 分钟读完 ｜ 面试前只看 ⭐⭐⭐ 部分
 
-蒸馏自 [CORE_NOTES.md](../../agentic/content/CORE_NOTES.md)（12 节）与 [SYSTEM_DESIGN_PLAYBOOK.md](../../agentic/content/SYSTEM_DESIGN_PLAYBOOK.md) 第五节的六类题高分句。所有代码块、dataclass、表格原样保留。
+蒸馏自 [外部原件未收录：CORE_NOTES.md](../DEPENDENCIES.md)（12 节）与 [答题框架（本仓库版）](../02_playbook.md) 第五节的六类题高分句。这些原件不在仓库；当前六篇可直接阅读，不依赖取得原件。
 
 | 文件 | 主题 | 优先级 | 预计分钟 |
 |---|---|---|---|
@@ -22,3 +22,4 @@
 ## 时间紧的读法
 
 01 → 02 → 05 → 06，只读文内标 ⭐⭐⭐ 的小节 + 每节末尾的「高分句」引用块，约 25 分钟。
+

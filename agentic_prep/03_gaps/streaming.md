@@ -6,7 +6,7 @@
 
 1. Agent 产品的 streaming 本质是 **durability 问题而非 transport 问题**：token 先写 durable event log（Redis Streams / ring buffer），HTTP 连接只是 log 上的一个 cursor——断线重连、多设备、水平扩展全靠这一层解耦。
 2. **中断是异步协作协议**：`cancel_requested` 只是意向标记，到 in-flight LLM call / running tool 真正停止有一个窗口期 $\Delta t$，期间到达的 delta 要按 turn epoch 丢弃，partial 结果必须落显式终态（`aborted`）。
-3. 传输选型只问一件事：是否需要 server 主动向 client 发起 blocking request（如 approval）——不需要就 SSE + POST 控制通道，需要才升级 WebSocket 或双向 JSON-RPC（Codex app-server 模式，见 [mirendil 整理](../../projects/takehome_mirendil/03_option2_cloud_agent_chat.md)）。
+3. 传输选型只问一件事：是否需要 server 主动向 client 发起 blocking request（如 approval）——不需要就 SSE + POST 控制通道，需要才升级 WebSocket 或双向 JSON-RPC（Codex app-server 模式，见 [外部原件未收录：mirendil 整理](../DEPENDENCIES.md)）。
 
 ## 核心概念
 
@@ -300,6 +300,7 @@ setInterval(() => {                                 // 2) 30–60ms 一拍合并
 - [Ably: Resume tokens and last-event IDs for LLM streaming](https://ably.com/blog/resume-tokens-last-event-id-llm-streaming-reconnection) ・ [AI chat stream resumption: when Redis is enough](https://ably.com/blog/ai-chat-stream-resumption)
 - [AI SDK UI: Chatbot Resume Streams](https://ai-sdk.dev/docs/ai-sdk-ui/chatbot-resume-streams) ・ [LibreChat: Resumable Streams](https://www.librechat.ai/docs/features/resumable_streams)
 - [websocket.org: AI Token Streaming — From SSE to Durable Sessions](https://websocket.org/guides/use-cases/ai-streaming/)
-- 本地：[Codex app-server / Netclode / AI SDK 坑位整理](../../projects/takehome_mirendil/03_option2_cloud_agent_chat.md)
+- 本地：[外部原件未收录：Codex app-server / Netclode / AI SDK 坑位整理](../DEPENDENCIES.md)
 
 </details>
+

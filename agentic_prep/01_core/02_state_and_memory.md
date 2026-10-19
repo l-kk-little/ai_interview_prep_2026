@@ -179,7 +179,7 @@ def on_context_pressure(agent):                 # 超过警戒水位
 <summary>Claude Code 文件式：【技术机制】memory as versioned files</summary>
 
 **存储结构**：全部是 markdown 文件，两套系统：
-- **CLAUDE.md 层级**（人写）：managed policy → `~/.claude/CLAUDE.md`（user）→ `./CLAUDE.md` 或 `./.claude/CLAUDE.md`（project）→ `CLAUDE.local.md`（个人、gitignore）。支持 `@path` import（最深 4 hops）；`.claude/rules/*.md` 可用 `paths:` frontmatter 做 path-scoped lazy load。
+- **CLAUDE.md 层级**（人写）：managed policy → `~/.claude/CLAUDE.md`（user）→ `./CLAUDE.md` 或 `./.claude/CLAUDE.md`（project）→ `CLAUDE.local.md`（个人、gitignore）。支持 `@path` import（最深 4 hops）；`.claude/rules/*.md` 可用 `paths:` frontmatter 做 path-scoped lazy load。 <!-- path-check: example Claude Code layout; not a course dependency -->
 - **Auto memory**（模型写）：`~/.claude/projects/<project>/memory/`，`MEMORY.md` 是索引 + 若干 topic files（`debugging.md` 等）。
 
 **写入路径**：CLAUDE.md 人写（或 `/init` 生成后人 review）；auto memory 由模型在会话中判断「未来会话有用」才写，用户纠正/偏好是主要触发。
@@ -410,3 +410,4 @@ def condensed_view(events, max_size, keep_first):
 8. [Temporal: Workflow Execution Events](https://docs.temporal.io/workflow-execution/event) — event history / replay / determinism 的官方定义，durable execution 面试题的标准出处 · 预计 15 min
 9. [Claude Code: How Claude remembers your project](https://code.claude.com/docs/en/memory) — CLAUDE.md 层级 + auto memory 的完整机制，文件式 memory 的参考实现 · 预计 10 min
 10. [LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory](https://arxiv.org/abs/2410.10813) — 5 项 memory 能力的评测框架，聊「memory 怎么评」时的引用 · 预计 15 min
+

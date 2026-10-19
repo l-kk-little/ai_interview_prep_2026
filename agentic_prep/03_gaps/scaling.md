@@ -303,4 +303,5 @@ async def complete(req):
 - lease/fencing、event sourcing 细节：[state & memory](../01_core/02_state_and_memory.md)
 - Sora 真题全文（数据模型/API/failure 章节都值得背）：[1p3a-openai.md](../../online_resource/1p3a-openai.md)
 - GPU Scheduling Platform 原题：[question-bank/anthropic.md](../../online_resource/question-bank/anthropic.md)
-- 系统设计答题框架：[SYSTEM_DESIGN_PLAYBOOK](../../agentic/content/SYSTEM_DESIGN_PLAYBOOK.md)
+- 系统设计答题框架：[答题框架（本仓库版）](../02_playbook.md)
+

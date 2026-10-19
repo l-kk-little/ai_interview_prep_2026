@@ -130,7 +130,7 @@ if __name__ == "__main__":
     print("all tests passed")
 ```
 
-核心约 95 行。跑法：`python c10.py` → `all tests passed`。
+核心约 95 行。跑法：`python c10.py` → `all tests passed`。 <!-- path-check: example Save the preceding snippet as c10.py before running -->
 
 ## 边界与测试要点
 
@@ -166,3 +166,4 @@ if __name__ == "__main__":
 ## 如果这轮允许 AI：怎么驾驶
 
 按 [../../02_playbook.md](../../02_playbook.md) 第八节：先声明验收标准 A（size 上限含注入前缀）/B（父路径重复）/C（fence 不裂开），让 AI 一次只做一个窄任务（如「给 place 加词边界切分，不改其他函数」），每步产出后自己跑 assert 块验证——重点检查 off-by-one（分隔符计费）和 reserve 预算，这两处是 AI 最常写错的地方。收尾解释哪些是 AI 写的、你怎么验证的。
+

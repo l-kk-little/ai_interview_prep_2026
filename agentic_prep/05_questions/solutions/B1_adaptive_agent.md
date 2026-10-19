@@ -1,6 +1,6 @@
 # [B1] Anthropic：能自主适应新任务的 Agentic AI System · 完整解答
 
-⏱ 读完 12 min ｜ 建议先自己限时 60min 答一遍再看（盲看解答记不住）。题面原文见 [../B_general_design.md](../B_general_design.md#b1)，完整 rubric 见 [../../../agentic/data/questions.json](../../../agentic/data/questions.json) → `q-anthropic-adaptive-agent`。
+⏱ 读完 12 min ｜ 建议先自己限时 60min 答一遍再看（盲看解答记不住）。题面原文见 [../B_general_design.md](../B_general_design.md#b1)，完整 rubric 见 [外部原件未收录：../../../agentic/data/questions.json](../../DEPENDENCIES.md) → `q-anthropic-adaptive-agent`。
 
 ## 题目还原
 
@@ -107,3 +107,4 @@ Run Controller 状态机 (plan→act→observe→verify; max_steps/cost enforce)
 - [GEPA](https://arxiv.org/abs/2507.19457)：②档 vs ③档取舍的样本效率数字出处。
 
 > 收尾高分句（可背）：这个系统里"适应"的单位不是一次聪明的反思，而是一个**过了 eval gate、可回滚的 diff**——写进 context、skill、memory 还是权重只是档位不同；没有 verifier 和 gate 的自我改进，优化的只是把病藏得更深的能力。
+

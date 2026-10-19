@@ -2,7 +2,7 @@
 
 ⏱ 读完 8 min ｜ 建议先盲写限时 55 分钟一遍再看（协议要成肌肉记忆，看会 ≠ 写得出）
 
-题库原文：[../C_live_ai_coding.md#c1](../C_live_ai_coding.md#c1) ｜ v1 rubric：[../../../agentic/data/questions.json](../../../agentic/data/questions.json) → `q-anthropic-stock-agent`
+题库原文：[../C_live_ai_coding.md#c1](../C_live_ai_coding.md#c1) ｜ v1 rubric：[外部原件未收录：../../../agentic/data/questions.json](../../DEPENDENCIES.md) → `q-anthropic-stock-agent`
 
 ## 题目还原 + 验收标准
 
@@ -102,7 +102,7 @@ if __name__ == "__main__":
 
 ## 与 lab 完整版的差异
 
-完整版：[../../../agentic/labs/01_raw_tool_agent/solution.py](../../../agentic/labs/01_raw_tool_agent/solution.py)（含 RUBRIC/tests）。55 分钟版砍掉的每一项都要**会口头补**：
+原完整版未发布：[外部原件未收录：../../../agentic/labs/01_raw_tool_agent/solution.py](../../DEPENDENCIES.md)（含 RUBRIC/tests）。55 分钟版砍掉的每一项都要**会口头补**：
 
 | 能力 | 55min 版 | lab 完整版 |
 |---|---|---|
@@ -147,3 +147,4 @@ if __name__ == "__main__":
 ## 如果这轮允许 AI
 
 本轮店面**禁 AI**（可查文档/网页）。若遇到允许 AI 的变体（如 C3 VO 轮），按 [../../02_playbook.md](../../02_playbook.md) 第八节：先让 AI 只读探索并引用文件佐证，再下窄任务（"只写 run_tool 的异常分支"），每个 diff 自己读过、用 fake client 测试验证后才接受，全程 narration 分工。
+

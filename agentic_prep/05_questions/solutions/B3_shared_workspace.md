@@ -1,6 +1,6 @@
 # [B3] Humans&：多人 + 多 Agent 的 Shared Workspace · 完整解答
 
-⏱ 读完 13 min ｜ 建议先自己限时 60min 答一遍再看（盲看解答记不住）。题面原文见 [../B_general_design.md](../B_general_design.md#b3)，完整 rubric 见 [../../../agentic/data/questions.json](../../../agentic/data/questions.json) → `q-humans-shared-workspace`。
+⏱ 读完 13 min ｜ 建议先自己限时 60min 答一遍再看（盲看解答记不住）。题面原文见 [../B_general_design.md](../B_general_design.md#b3)，完整 rubric 见 [外部原件未收录：../../../agentic/data/questions.json](../../DEPENDENCIES.md) → `q-humans-shared-workspace`。
 
 ## 题目还原
 
@@ -107,4 +107,5 @@ def commit(proposal):
 - [Cognition "Don't Build Multi-Agents"](https://cognition.com/blog/dont-build-multi-agents)：actions carry implicit decisions——写任务单 assignee、context 摘要须带 rationale 的论据。
 - [MAST](https://arxiv.org/abs/2503.13657)：3 类 14 种失败模式，eval 与设计 review 的 checklist。
 - [Temporal event history](https://docs.temporal.io/workflow-execution/event)：append-only log + replay 重建的工程正典，room event log 的同构参照（[../../01_core/02_state_and_memory.md](../../01_core/02_state_and_memory.md) §8）。
-- 有界并发、typed result、冲突不写入、CAS 的可运行实现：[v1 lab04](../../../agentic/labs/04_multi_agent_memory/README.md)。
+- 有界并发、typed result、冲突不写入、CAS 的原配套实现未发布：[外部原件未收录：v1 lab04](../../DEPENDENCIES.md)。
+

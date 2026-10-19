@@ -1,7 +1,7 @@
 # [C12] Sierra 官方 AI-native onsite：Plan→Build→Review · 完整作战计划
 
 ⏱ 读完 12 min ｜ 必须提前彩排：用自己的 AI 环境跑一次"2h 从零到 demo"，盲看计划没用
-题库原文：[../C_live_ai_coding.md#c12](../C_live_ai_coding.md#c12) ｜ v1 rubric：[../../../agentic/data/questions.json](../../../agentic/data/questions.json) → `q-sierra-plan-build-review`
+题库原文：[../C_live_ai_coding.md#c12](../C_live_ai_coding.md#c12) ｜ v1 rubric：[外部原件未收录：../../../agentic/data/questions.json](../../DEPENDENCIES.md) → `q-sierra-plan-build-review`
 同 onsite 其他轮：[C9 禁 AI debugging](C9_debugging_round.md) ｜ [C13 draft PR + agents](C13_draft_pr_round.md)
 
 ## 题目还原：这题真正在考什么
@@ -104,3 +104,4 @@ Fake OrderService (内存 dict)
 - Sierra 官方博客 "The AI-native interview"（题库与 v1 rubric 引用源）：官方案例是候选人 2h 做了 AI 游戏、面试官现场试玩——**demo 体验本身是产品分**
 - 注意：社区面经仍报告 take-home + debugging 旧流程与此并存，**面前向 recruiter 确认场次格式**（题库 [C12] 原注）
 - Agent 边界设计的完整语言见 [../../02_playbook.md](../../02_playbook.md)；coding agent 环境准备见 [../../01_core/03_harness_env_swe.md](../../01_core/03_harness_env_swe.md)
+

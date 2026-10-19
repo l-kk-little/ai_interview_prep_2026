@@ -1,6 +1,6 @@
 # [A4] Extend：保险理赔文档 agent（split/classify/extract/validate + 人审）· 完整解答
 
-⏱ 读完 14 min ｜ 建议先自己限时 60min 答一遍再看（盲看解答记不住）。题面见 [../A_scenario_design.md](../A_scenario_design.md#a4)，rubric 出处 [../../../agentic/data/questions.json](../../../agentic/data/questions.json) → `q-extend-document-agent`。姊妹题 [A3](A3_document_pipeline.md)（PII/合规与人审经济学深挖在那边）。7/17 面试前配合 [../../06_company_briefs.md](../../06_company_briefs.md) Extend 卡（五句必背）复习。
+⏱ 读完 14 min ｜ 建议先自己限时 60min 答一遍再看（盲看解答记不住）。题面见 [../A_scenario_design.md](../A_scenario_design.md#a4)，rubric 出处 [外部原件未收录：../../../agentic/data/questions.json](../../DEPENDENCIES.md) → `q-extend-document-agent`。姊妹题 [A3](A3_document_pipeline.md)（PII/合规与人审经济学深挖在那边）。7/17 面试前配合 [../../06_company_briefs.md](../../06_company_briefs.md) Extend 卡（五句必背）复习。
 
 ## 题目还原
 
@@ -89,7 +89,7 @@ Client ──POST /uploads (content_hash 去重)──► Intake API + Auth
 
 **2）新 schema 如何重跑旧文档？**——"这就是 artifact DAG 的回报时刻。① schema registry 管版本（semver）：加可选字段是 minor，改字段语义是 major；每条抽取记录都 tag schema_version，consumer 显式 pin 版本。② 重跑 = 建 backfill job：`artifact_id = hash(stage, parents, config_version)`，parse/split/classify 的输入和配置没变 → 缓存命中，**只有 extract→validate 需要重算**，成本只有抽取层 token。③ backfill 走独立低优先级 lane + 预算上限 + 游标 checkpoint（可断点续跑），不挤占线上 SLO。④ 人工修正的字段：语义未变的字段 carry forward（修正绑定的是 `(doc, field_path)` 不是某次模型输出）；语义变了的字段作废该修正、只对这些字段生成新 review item——绝不让新模型静默覆盖人工值。⑤ cutover：新 schema 先在 golden set + 生产抽样上 shadow 跑，出 field-level diff 报告，过 gate 再切默认版本，旧版本给 deprecation 窗口。"
 
-**3）恶意 PDF 中的指令如何隔离？**——"三层，防御在架构不在 prompt：① 抽取模型 **quarantined**：无工具、schema 约束解码，注入最多污染字段值，而字段值要过 validators + invariants + span 校验；② 编排层（决定 DAG 下一步的代码）只消费 schema-valid 的结构化输出，**永远不把文档原文放进任何有工具权限的 context**——CaMeL 式控制/数据流分离；③ 隐藏文本检测：text layer 与渲染像素 OCR 结果 diff，'肉眼不可见但机器可读'的内容直接 flag。回归用 AgentDojo 式 utility-under-attack + ASR 双指标进 eval gate。用 lethal trifecta 自检：碰不可信内容的组件没有外发通道。完整展开见 [A3](A3_document_pipeline.md) 深挖 3；相邻练习题 `q-extend-permission-agent`（[../../../agentic/data/questions.json](../../../agentic/data/questions.json)）是这个追问的整题版。"
+**3）恶意 PDF 中的指令如何隔离？**——"三层，防御在架构不在 prompt：① 抽取模型 **quarantined**：无工具、schema 约束解码，注入最多污染字段值，而字段值要过 validators + invariants + span 校验；② 编排层（决定 DAG 下一步的代码）只消费 schema-valid 的结构化输出，**永远不把文档原文放进任何有工具权限的 context**——CaMeL 式控制/数据流分离；③ 隐藏文本检测：text layer 与渲染像素 OCR 结果 diff，'肉眼不可见但机器可读'的内容直接 flag。回归用 AgentDojo 式 utility-under-attack + ASR 双指标进 eval gate。用 lethal trifecta 自检：碰不可信内容的组件没有外发通道。完整展开见 [A3](A3_document_pipeline.md) 深挖 3；相邻练习题 `q-extend-permission-agent`（[外部原件未收录：../../../agentic/data/questions.json](../../DEPENDENCIES.md)）是这个追问的整题版。"
 
 ## 失败模式与恢复（本题具体场景）
 
@@ -114,3 +114,4 @@ Client ──POST /uploads (content_hash 去重)──► Intake API + Auth
 - Eval 词汇与 judge 校准：[Anthropic evals blog](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)、[MT-Bench](https://arxiv.org/abs/2306.05685)（[../../04_benchmarks.md](../../04_benchmarks.md)）。
 
 > 一句话收尾：parse→split→classify→extract→validate→review 是一条 versioned artifact DAG——幂等、恢复、schema 重跑、成本控制，全是同一个设计决定的红利。
+

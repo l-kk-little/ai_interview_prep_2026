@@ -1,6 +1,6 @@
 # [C2] Anthropic：Durable Function Call Cache · 参考实现
 
-⏱ 读完 12 min ｜ 建议先盲写 60 分钟（按下面时间盒）再对照——盲看解答记不住。题面原文见 [../C_live_ai_coding.md](../C_live_ai_coding.md#c2)，完整 rubric 见 [../../../agentic/data/questions.json](../../../agentic/data/questions.json) → `q-anthropic-durable-cache`。
+⏱ 读完 12 min ｜ 建议先盲写 60 分钟（按下面时间盒）再对照——盲看解答记不住。题面原文见 [../C_live_ai_coding.md](../C_live_ai_coding.md#c2)，完整 rubric 见 [外部原件未收录：../../../agentic/data/questions.json](../../DEPENDENCIES.md) → `q-anthropic-durable-cache`。
 
 ## 题目还原 + 验收标准
 
@@ -150,7 +150,7 @@ class DurableFunctionCache:
             event.set()
 ```
 
-intent→执行→result 的两阶段写法就是 [../../../agentic/labs/03_durable_harness/README.md](../../../agentic/labs/03_durable_harness/README.md) 里"最关键的 crash window"的单机版：崩溃后 intent 无 result 的 key 只能标 **unknown**——纯函数直接重算即可；有副作用的调用必须像 lab 03 那样靠外部 idempotency key 重放拿回同一结果，本地日志自己保证不了 exactly-once。这句话主动说出来是本题最大的加分点。
+intent→执行→result 的两阶段写法就是 [外部原件未收录：../../../agentic/labs/03_durable_harness/README.md](../../DEPENDENCIES.md) 里"最关键的 crash window"的单机版：崩溃后 intent 无 result 的 key 只能标 **unknown**——纯函数直接重算即可；有副作用的调用必须像 lab 03 那样靠外部 idempotency key 重放拿回同一结果，本地日志自己保证不了 exactly-once。这句话主动说出来是本题最大的加分点。
 
 ## 边界与测试要点
 
@@ -195,3 +195,4 @@ if __name__ == "__main__":
 ## 如果这轮允许 AI：怎么驾驶
 
 按 [../../02_playbook.md](../../02_playbook.md) 第八节：先自己写验收标准 1–6 和 WAL 记录格式（这是你的设计判断，不外包），再让 AI 一次一个窄任务："实现 `_replay`，遇到第一条 checksum 不符或截断的记录停止并 truncate，附坏尾测试"。review 时专查三处：bool/int 顺序、delete-and-reinsert、fsync 是否真调了 `os.fsync` 而不是只 `flush`——这三处正是 AI 最常写错、也正是 rubric 给分的地方。
+
